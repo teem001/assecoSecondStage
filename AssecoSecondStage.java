@@ -34,6 +34,8 @@ public class AssecoSecondStage {
 //    all but TODO  one
 //     of the values in A occur an even number of times.
 
+
+
     public static int solutionOne(int[] a){
           int count =0;
 
@@ -96,6 +98,7 @@ public class AssecoSecondStage {
     public static int[] solutionThree(int[] a){
         List<Integer> resultlist = new ArrayList<>();
 
+
         for (int j : a) {
             boolean isPrime = checkPrime(j);
             if (isPrime) {
@@ -113,8 +116,8 @@ public class AssecoSecondStage {
 
     private static boolean checkPrime(int a){
         if (a <2) return false;
-        if (a == 2) return true;
-        for(int i =2 ; i< a; i++ ){
+        if (a == 2 ) return true;
+        for(int i =2 ; i< a/2; i++ ){
             if(a%i ==0) return false;
         }
         return true;
