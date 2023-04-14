@@ -98,20 +98,7 @@ public class AssecoSecondStage {
     public static int[] solutionThree(int[] a){
         List<Integer> resultlist = new ArrayList<>();
 
-
-        for (int j : a) {
-            boolean isPrime = checkPrime(j);
-            if (isPrime) {
-                resultlist.add(j);
-            }
-        }
-        int[] resultArr = new int[resultlist.size()];
-        for (int i = 0; i< resultlist.size(); i++){
-            resultArr[i] = resultlist.get(i);
-        }
-
-
-        return resultArr;
+        return Arrays.stream(a).filter(AssecoSecondStage::checkPrime).toArray();
     }
 
     private static boolean checkPrime(int a){
