@@ -31,24 +31,25 @@ public class AssecoSecondStage {
 //    Write an efficient algorithm for the following assumptions:
 //    N is an odd integer within the range [1..1,000,000];
 //    each element of array A is an integer within the range [1..1,000,000,000];
-//    all but one of the values in A occur an even number of times.
+//    all but TODO  one
+//     of the values in A occur an even number of times.
 
     public static int solutionOne(int[] a){
           int count =0;
 
-          for(int i =0; i<a.length; i++){
-              for(int j=0; j<a.length; j++){
-                  if(a[i]== a[j]){
-                      count ++;
-                  }
-              }
-              if(count%2 !=0) {
-                  return a[i];
+        for (int k : a) {
+            for (int i : a) {
+                if (k == i) {
+                    count++;
+                }
+            }
+            if (count % 2 != 0) {
+                return k;
 
 
-              }
-              count =0;
-          }
+            }
+            count = 0;
+        }
 
 
      return 0;
@@ -121,15 +122,14 @@ public class AssecoSecondStage {
 
 
     public static void main(String[] args) {
-        //    A[0] = 9  A[1] = 3  A[2] = 9
-//    A[3] = 3  A[4] = 9  A[5] = 7
-//    A[6] = 9
+
         int[] a = {9,3,9,3,9,7,9};
         int[] b = {3, 67, 12, 7, 11, 9};
 
 
         System.out.println( solutionOne(a));
-        System.out.println(solutionTwo(16));
+        System.out.println(solutionTwo(1000
+        ));
         System.out.println(Arrays.toString(solutionThree(b)));
     }
 
